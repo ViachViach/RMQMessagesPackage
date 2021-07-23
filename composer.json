@@ -1,0 +1,38 @@
+{
+  "name": "viachviach/rmq-massages-package",
+  "description": "Messages for RMQ",
+  "keywords": ["rmq", "message"],
+  "license": "MIT",
+  "require": {
+    "php": "^8.0"
+  },
+  "require-dev": {
+    "psalm/plugin-symfony": "^1.4",
+    "phpstan/phpstan": "^0.12.33",
+    "squizlabs/php_codesniffer": "^3.5"
+  },
+  "config": {
+    "optimize-autoloader": true,
+    "preferred-install": {
+      "*": "dist"
+    },
+    "sort-packages": true
+  },
+  "autoload": {
+    "psr-4": {
+      "RMQ\\Messages\\": "src"
+    }
+  },
+  "scripts": {
+    "check": {
+      "codestyle": "@codestyle",
+      "static-analysis": "@static-analysis"
+    },
+    "codestyle": "@php vendor/bin/phpcs",
+    "static-analysis": {
+      "phpstan": "@php vendor/bin/phpstan analyse -c phpstan.neon",
+      "psalm": "@php vendor/bin/psalm"
+    }
+  },
+  "minimum-stability":  "dev"
+}
