@@ -17,9 +17,10 @@ class AccountMessage
         return $this->login;
     }
 
-    public function setLogin(string $login): void
+    public function setLogin(string $login): AccountMessage
     {
         $this->login = $login;
+        return $this;
     }
 
     public function getPassword(): string
@@ -27,9 +28,10 @@ class AccountMessage
         return $this->password;
     }
 
-    public function setPassword(string $password): void
+    public function setPassword(string $password): AccountMessage
     {
         $this->password = $password;
+        return $this;
     }
 
     public function getDelay(): int
@@ -37,9 +39,10 @@ class AccountMessage
         return $this->delay;
     }
 
-    public function setDelay(int $delay): void
+    public function setDelay(int $delay): AccountMessage
     {
         $this->delay = $delay;
+        return $this;
     }
 
     public function getCity(): string
@@ -47,9 +50,10 @@ class AccountMessage
         return $this->city;
     }
 
-    public function setCity(string $city): void
+    public function setCity(string $city): AccountMessage
     {
         $this->city = $city;
+        return $this;
     }
 
     public function getVisaType(): string
@@ -57,8 +61,9 @@ class AccountMessage
         return $this->visaType;
     }
 
-    public function setVisaType(string $visaType): void
+    public function setVisaType(string $visaType): AccountMessage
     {
         $this->visaType = $visaType;
+        return $this;
     }
 }
