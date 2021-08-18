@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace RMQ\Messages;
 
-class ExpiredPassword
+class ExpiredPasswordMessage
 {
     private string $login;
     private string $password;
@@ -14,7 +14,7 @@ class ExpiredPassword
         return $this->login;
     }
 
-    public function setLogin(string $login): ExpiredPassword
+    public function setLogin(string $login): ExpiredPasswordMessage
     {
         $this->login = $login;
         return $this;
@@ -25,7 +25,7 @@ class ExpiredPassword
         return $this->password;
     }
 
-    public function setPassword(string $password): ExpiredPassword
+    public function setPassword(string $password): ExpiredPasswordMessage
     {
         $this->password = $password;
         return $this;
