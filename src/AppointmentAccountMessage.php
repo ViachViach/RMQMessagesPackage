@@ -4,15 +4,13 @@ declare(strict_types=1);
 
 namespace RMQ\Messages;
 
-use DateTimeImmutable;
-
 class AppointmentAccountMessage
 {
     private string $login;
     private string $password;
 
     /**
-     * @var DateTimeImmutable[]
+     * @var AccountDateIntervalMessage[]
     */
     private array $dateInterval;
     private int $waitDate;
@@ -40,7 +38,7 @@ class AppointmentAccountMessage
     }
 
     /**
-     * @return DateTimeImmutable[]
+     * @return AccountDateIntervalMessage[]
      */
     public function getDateInterval(): array
     {
@@ -48,7 +46,7 @@ class AppointmentAccountMessage
     }
 
     /**
-     * @param DateTimeImmutable[] $dateInterval
+     * @param AccountDateIntervalMessage[] $dateInterval
      */
     public function setDateInterval(array $dateInterval): AppointmentAccountMessage
     {
