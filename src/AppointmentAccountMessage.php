@@ -4,38 +4,13 @@ declare(strict_types=1);
 
 namespace RMQ\Messages;
 
-class AppointmentAccountMessage
+class AppointmentAccountMessage extends AccountMessage
 {
-    private string $login;
-    private string $password;
-
     /**
      * @var AccountDateIntervalMessage[]
     */
     private array $dateInterval;
     private int $waitDate;
-
-    public function getLogin(): string
-    {
-        return $this->login;
-    }
-
-    public function setLogin(string $login): AppointmentAccountMessage
-    {
-        $this->login = $login;
-        return $this;
-    }
-
-    public function getPassword(): string
-    {
-        return $this->password;
-    }
-
-    public function setPassword(string $password): AppointmentAccountMessage
-    {
-        $this->password = $password;
-        return $this;
-    }
 
     /**
      * @return AccountDateIntervalMessage[]
