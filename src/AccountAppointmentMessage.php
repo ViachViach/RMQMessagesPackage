@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace RMQ\Messages;
 
-class AppointmentAccountMessage
+class AccountAppointmentMessage
 {
     private string $login;
     private string $password;
@@ -13,7 +13,7 @@ class AppointmentAccountMessage
     private string $visaType;
     /**
      * @var AccountDateIntervalMessage[]
-    */
+     */
     private array $dateInterval;
     private int $waitDate;
 
@@ -22,7 +22,7 @@ class AppointmentAccountMessage
         return $this->login;
     }
 
-    public function setLogin(string $login): AppointmentAccountMessage
+    public function setLogin(string $login): AccountAppointmentMessage
     {
         $this->login = $login;
         return $this;
@@ -33,7 +33,7 @@ class AppointmentAccountMessage
         return $this->password;
     }
 
-    public function setPassword(string $password): AppointmentAccountMessage
+    public function setPassword(string $password): AccountAppointmentMessage
     {
         $this->password = $password;
         return $this;
@@ -44,7 +44,7 @@ class AppointmentAccountMessage
         return $this->delay;
     }
 
-    public function setDelay(int $delay): AppointmentAccountMessage
+    public function setDelay(int $delay): AccountAppointmentMessage
     {
         $this->delay = $delay;
         return $this;
@@ -55,7 +55,7 @@ class AppointmentAccountMessage
         return $this->city;
     }
 
-    public function setCity(string $city): AppointmentAccountMessage
+    public function setCity(string $city): AccountAppointmentMessage
     {
         $this->city = $city;
         return $this;
@@ -66,12 +66,12 @@ class AppointmentAccountMessage
         return $this->visaType;
     }
 
-    public function setVisaType(string $visaType): AppointmentAccountMessage
+    public function setVisaType(string $visaType): AccountAppointmentMessage
     {
         $this->visaType = $visaType;
         return $this;
     }
-    
+
     /**
      * @return AccountDateIntervalMessage[]
      */
@@ -83,7 +83,7 @@ class AppointmentAccountMessage
     /**
      * @param AccountDateIntervalMessage[] $dateInterval
      */
-    public function setDateInterval(array $dateInterval): AppointmentAccountMessage
+    public function setDateInterval(array $dateInterval): AccountAppointmentMessage
     {
         $this->dateInterval = $dateInterval;
         return $this;
@@ -94,7 +94,7 @@ class AppointmentAccountMessage
         return $this->waitDate;
     }
 
-    public function setWaitDate(int $waitDate): AppointmentAccountMessage
+    public function setWaitDate(int $waitDate): AccountAppointmentMessage
     {
         $this->waitDate = $waitDate;
         return $this;
