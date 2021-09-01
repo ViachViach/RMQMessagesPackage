@@ -8,7 +8,6 @@ class AccountAppointmentMessage
 {
     private string $login;
     private string $password;
-    private int $delay;
     private string $city;
     private string $visaType;
     /**
@@ -38,18 +37,7 @@ class AccountAppointmentMessage
         $this->password = $password;
         return $this;
     }
-
-    public function getDelay(): int
-    {
-        return $this->delay;
-    }
-
-    public function setDelay(int $delay): AccountAppointmentMessage
-    {
-        $this->delay = $delay;
-        return $this;
-    }
-
+    
     public function getCity(): string
     {
         return $this->city;
