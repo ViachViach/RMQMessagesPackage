@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace RMQ\Messages;
 
+use DateTimeInterface;
+
 class ScreenshotMessage
 {
     private string $path;
@@ -65,6 +67,17 @@ class ScreenshotMessage
     public function setScreenshotType(string $screenshotType): ScreenshotMessage
     {
         $this->screenshotType = $screenshotType;
+        return $this;
+    }
+
+    public function getCreateAt(): DateTimeInterface
+    {
+        return $this->createAt;
+    }
+
+    public function setCreateAt(DateTimeInterface $createAt): ScreenshotMessage
+    {
+        $this->createAt = $createAt;
         return $this;
     }
 }
