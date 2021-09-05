@@ -11,6 +11,7 @@ class ScreenshotMessage
     private string $city;
     private string $visaType;
     private string $screenshotType;
+    private DateTimeInterface $createAt;
 
     public function getPath(): string
     {
