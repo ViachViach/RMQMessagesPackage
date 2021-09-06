@@ -4,61 +4,13 @@ declare(strict_types=1);
 
 namespace RMQ\Messages;
 
-class AccountAppointmentMessage
+class AccountAppointmentMessage extends AccountMessage
 {
-    private string $login;
-    private string $password;
-    private string $city;
-    private string $visaType;
     /**
      * @var AccountDateIntervalMessage[]
      */
     private array $dateInterval;
     private int $waitDate;
-
-    public function getLogin(): string
-    {
-        return $this->login;
-    }
-
-    public function setLogin(string $login): AccountAppointmentMessage
-    {
-        $this->login = $login;
-        return $this;
-    }
-
-    public function getPassword(): string
-    {
-        return $this->password;
-    }
-
-    public function setPassword(string $password): AccountAppointmentMessage
-    {
-        $this->password = $password;
-        return $this;
-    }
-    
-    public function getCity(): string
-    {
-        return $this->city;
-    }
-
-    public function setCity(string $city): AccountAppointmentMessage
-    {
-        $this->city = $city;
-        return $this;
-    }
-
-    public function getVisaType(): string
-    {
-        return $this->visaType;
-    }
-
-    public function setVisaType(string $visaType): AccountAppointmentMessage
-    {
-        $this->visaType = $visaType;
-        return $this;
-    }
 
     /**
      * @return AccountDateIntervalMessage[]
