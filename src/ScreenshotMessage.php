@@ -6,7 +6,7 @@ namespace RMQ\Messages;
 
 use DateTimeInterface;
 
-class ScreenshotMessage
+final class ScreenshotMessage
 {
     private string $path;
     private string $login;

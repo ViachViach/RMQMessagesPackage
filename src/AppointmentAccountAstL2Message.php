@@ -2,6 +2,6 @@
 
 namespace RMQ\Messages;
 
-class AppointmentAccountAstL2Message extends AccountAppointmentMessage
+final class AppointmentAccountAstL2Message extends AccountAppointmentMessage
 {
 }

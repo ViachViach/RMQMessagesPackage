@@ -6,7 +6,7 @@ namespace RMQ\Messages;
 
 use DateTimeImmutable;
 
-class AccountDateIntervalMessage
+final class AccountDateIntervalMessage
 {
     private DateTimeImmutable $dateForm;
     private DateTimeImmutable $dateTo;

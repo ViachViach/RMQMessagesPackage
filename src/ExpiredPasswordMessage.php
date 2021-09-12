@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace RMQ\Messages;
 
-class ExpiredPasswordMessage
+final class ExpiredPasswordMessage
 {
     private string $login;
     private string $password;

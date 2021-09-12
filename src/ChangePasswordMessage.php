@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace RMQ\Messages;
 
-class ChangePasswordMessage
+final class ChangePasswordMessage
 {
     private string $login;
     private string $password;
