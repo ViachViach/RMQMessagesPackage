@@ -16,9 +16,10 @@ class InterviewDateMessage
         return $this->login;
     }
 
-    public function setLogin(string $login): void
+    public function setLogin(string $login): InterviewDateMessage
     {
         $this->login = $login;
+        return $this;
     }
 
     public function getInterviewDate(): DateTimeInterface
@@ -26,8 +27,9 @@ class InterviewDateMessage
         return $this->interviewDate;
     }
 
-    public function setInterviewDate(DateTimeInterface $interviewDate): void
+    public function setInterviewDate(DateTimeInterface $interviewDate): InterviewDateMessage
     {
         $this->interviewDate = $interviewDate;
+        return $this;
     }
 }
