@@ -4,30 +4,30 @@ declare(strict_types=1);
 
 namespace RMQ\Messages;
 
-use DateTimeImmutable;
+use DateTimeInterface;
 
 final class AccountDateIntervalMessage
 {
-    private DateTimeImmutable $dateForm;
-    private DateTimeImmutable $dateTo;
+    private DateTimeInterface $dateForm;
+    private DateTimeInterface $dateTo;
 
-    public function getDateForm(): DateTimeImmutable
+    public function getDateForm(): DateTimeInterface
     {
         return $this->dateForm;
     }
 
-    public function setDateForm(DateTimeImmutable $dateForm): AccountDateIntervalMessage
+    public function setDateForm(DateTimeInterface $dateForm): AccountDateIntervalMessage
     {
         $this->dateForm = $dateForm;
         return $this;
     }
 
-    public function getDateTo(): DateTimeImmutable
+    public function getDateTo(): DateTimeInterface
     {
         return $this->dateTo;
     }
 
-    public function setDateTo(DateTimeImmutable $dateTo): AccountDateIntervalMessage
+    public function setDateTo(DateTimeInterface $dateTo): AccountDateIntervalMessage
     {
         $this->dateTo = $dateTo;
         return $this;
